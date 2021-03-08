@@ -11,7 +11,7 @@ Eventos de mouse em Jquery.
 	mouseUp - Quando soltar o botão
 	Mousemove - Movimento do mouse
 	Dblclick - Após o duplo clique
-	click
+	
 
 ```
 
