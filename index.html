@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<style>
+		body{
+			background: #000;
+			font-family: arial, sans-serif;
+		}
+
+		.container{
+			width: 90%;
+			margin: 0 auto 0 50px;
+			padding-top: 8%;
+		}
+
+		.figura{
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.fala{
+			color: #fff;
+			font-size: 32px;
+		}
+	</style>
+</head>
+<body>	
+	<section class="container">
+		<div class="figura">
+			<img src="img/bravo.png" alt="GB">
+		</div>
+
+		<div class="cord"></div>
+		<div class="cord2"></div>
+
+	</section>
+	
+	<script type="text/javascript">
+
+		$('.container').mousemove(function(){
+			var largura = $('.container').width();
+			var posicao = $('.container').offset().left;
+
+			if ( (event.pageX - posicao) > (largura / 2) ) {
+				$('.figura img').attr('src', 'img/direita.png');
+			} else {
+				$('.figura img').attr('src', 'img/esquerda.png');
+			}
+
+			$('.cord').text(event.pageX - posicao);
+			$('.cord2').text(largura / 2);
+
+		});
+
+		
+		$('.figura img').dblclick(function(){
+			$(this).attr('src', 'img/feliz.png');
+		})
+		
+		$('.figura img').mouseover(function(){
+			$(this).attr('src', 'img/cima.png');
+		})
+
+		$('.figura img').mouseout(function(){
+			$(this).attr('src', 'img/bravo.png');
+		})
+
+		$('.figura img').mousedown(function(){
+			$(this).attr('src', 'img/sair.png');
+		})
+
+		$('.figura img').mouseup(function(){
+			$(this).attr('src', 'img/soltar.png');
+		})
+
+	</script>
+</body>
+</html>
