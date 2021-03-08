@@ -5,7 +5,7 @@ Eventos de mouse em Jquery.
 \############ Eventos mouse click
 
 ```
-Mouseover - Ponteiro em cima do elemento
+	Mouseover - Ponteiro em cima do elemento
 	Mouseout - Sair com o ponteiro do mouse
 	Mousedown - Enquanto estiver clicando
 	mouseUp - Quando soltar o botão
